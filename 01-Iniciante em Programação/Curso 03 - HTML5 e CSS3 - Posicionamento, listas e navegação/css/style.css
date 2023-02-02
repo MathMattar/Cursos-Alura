@@ -1,11 +1,11 @@
 /* CSS padrão */
 
-body{
+body {
 	font-family: 'Montserrat', sans-serif;
 }
 
 header {
-	background:  #bbbbbb;
+	background: #bbbbbb;
 	padding: 20px 0;
 }
 
@@ -41,7 +41,7 @@ nav a:hover {
 
 footer {
 	text-align: center;
-	background: url("bg.jpg");
+	background: url("../images/bg.jpg");
 	padding: 40px 0;
 }
 
@@ -53,98 +53,100 @@ footer {
 
 /*css pagina inicial */
 
-.banner{
+.banner {
 	width: 100%;
 }
 
-.titulo-principal{
+.titulo-principal {
 	text-align: center;
 	font-size: 2em;
 	margin: 0 0 1em;
 	clear: left;
 }
 
-.principal{
+.principal {
 	padding: 3em 0;
-	background: $fefefe;
+	background: #fefefe;
 	width: 940px;
 	margin: 0 auto;
 }
 
-.principal p{
+.principal p {
 	margin: 0 0 1em;
 }
 
-.principal strong{
+.principal strong {
 	font-weight: bold;
 }
 
-.principal em{
+.principal em {
 	font-style: italic;
 }
 
-.utensilios{
+.utensilios {
 	width: 120px;
 	float: left;
 	margin: 0 20px 20px 0;
 }
 
-.mapa{
+.mapa {
+	width: 100vw;
 	padding: 3em 0;
 	background: linear-gradient(#fefefe, #888888);
 }
 
-.mapa-conteudo{
+.mapa-conteudo {
 	width: 940px;
 	margin: 0 auto;
 	box-shadow: 10px 10px 30px #000000;
 }
 
-.mapa p{
+.mapa p {
 	margin: 0 0 2em;
 	text-align: center;
 }
 
-.beneficios{
+.beneficios {
 	padding: 3em 0;
 	background: #888888;
+	width: 100vw;
 }
 
-.conteudo-beneficios{
+.conteudo-beneficios {
 	width: 640px;
 	margin: 0 auto;
 }
 
-.lista-beneficios{
+.lista-beneficios {
 	width: 40%;
 	display: inline-block;
 	vertical-align: top;
 }
 
-.itens{
+.itens {
 	line-height: 1.5;
 }
 
-.itens:first-child{
+.itens:first-child {
 	font-weight: bold;
 }
 
-.itens:before{
+.itens:before {
 	content: "🞄";
 }
 
-.imagem-beneficios{
+.imagem-beneficios {
 	width: 60%;
 	opacity: 1;
-	transition: 6s00ms;
+	transition: 600ms;
 	box-shadow: 10px 10px 10px #000000;
 }
 
-.imagem-beneficios:hover{
+.imagem-beneficios:hover {
 	opacity: .5;
 }
 
-.video{
+.video {
 	width: 560px;
 	margin: 2em auto;
 }
@@ -176,7 +178,7 @@ footer {
 	border: 2.5px solid #088c19;
 }
 
-.produtos li:hover h2{
+.produtos li:hover h2 {
 	font-size: 1.6em;
 }
 
@@ -187,7 +189,7 @@ footer {
 
 .produto-descricao {
 	font-size: 1.2em;
- }
+}
 
 .produto-preco {
 	font-size: 1.5em;
@@ -197,28 +199,67 @@ footer {
 
 /* CSS página contato */
 
-form{
+.main-contato {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+form {
 	margin: 2.5em 0;
 }
 
-form label, form legend{
+.formulario {
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form label,
+form legend {
 	display: block;
 	font-size: 1.25em;
 	margin: .8em 0 .8em;
 }
 
-.input-padrao{
+.input-padrao {
 	display: block;
 	margin: 0 0 10px;
 	padding: 10px 25px;
-	width: 50%;
+	width: 100%;
+	border: 1px solid black;
 }
 
-.checkbox{
+.horario,
+.telefone{
+	text-align: center;
+	width: 100%;
+}
+
+.checkbox {
 	margin: 20px 0 20px;
 }
 
-.enviar{
+select {
+	font-size: 16px;
+	text-align: center;
+	width: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+option {
+	font-size: 16px;
+}
+
+.enviar {
 	width: 40%;
 	padding: 15px 0;
 	background: orange;
@@ -231,22 +272,23 @@ form label, form legend{
 	cursor: pointer;
 }
 
-.enviar:hover{
+.enviar:hover {
 	background: darkorange;
 	transform: scale(1.2);
 }
 
-table{
+table {
 	margin: 20px 0 40px;
 }
 
-thead{
+thead {
 	background: #555555;
 	color: #ffffff;
 	font-weight: bold;
 }
 
-td, th{
+td,
+th {
 	border: 1px solid #000000;
 	padding: 10px 20px;
 }
@@ -254,36 +296,44 @@ td, th{
 /* responsivo a mobile */
 
 @media screen and (max-width: 480px) {
-	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos, .formulario{
-		width: auto;
-	}	
 
-	h1{
+	.caixa,
+	.principal,
+	.conteudo-beneficios,
+	.mapa-conteudo,
+	.video,
+	.produtos,
+	.formulario {
+		width: auto;
+	}
+
+	h1 {
 		text-align: center;
 	}
 
-	nav{
+	nav {
 		position: static;
 	}
 
-	.lista-beneficios, .imagem-beneficios{
+	.lista-beneficios,
+	.imagem-beneficios {
 		width: 100%;
 	}
 
-	.produtos li{
+	.produtos li {
 		width: 97%;
 	}
 
-	.formulario{
+	.formulario {
 
 		margin: 0 1em;
 	}
 
-	.input-padrao{
+	.input-padrao {
 		width: 84%;
 	}
 
-	table{
+	table {
 		width: 92%;
 		margin: 0 1em 2em 1em;
 	}
