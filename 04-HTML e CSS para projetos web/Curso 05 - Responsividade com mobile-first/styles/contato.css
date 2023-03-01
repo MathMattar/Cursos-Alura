@@ -32,7 +32,7 @@
     box-sizing: border-box;
 }
 
-.contato__email::placeholder{
+.contato__email::placeholder {
     font-family: var(--fonte-principal);
     color: var(--azul);
     padding-left: 3em;
@@ -45,4 +45,28 @@ hr {
     border-top: 1px solid black;
     width: 100%;
     margin: unset;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    
+    .contato__descricao {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
+
+    .contato__titulo {
+        font-size: 24px;
+    }
+
+    .contato__email {
+        width: 35%;
+    }
 }

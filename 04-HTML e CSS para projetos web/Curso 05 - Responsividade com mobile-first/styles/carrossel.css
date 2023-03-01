@@ -69,15 +69,41 @@
     margin: 0 0.5em;
 }
 
-.botoes__ancora{
+.botoes__ancora {
     font-weight: 700;
     color: var(--branco);
     text-decoration: none;
     background-color: var(--laranja);
     padding: 1em 2.2em;
-    
+
 }
 
 .descicao__avaliacao {
     margin-bottom: .5rem;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .carrossel__titulo {
+        font-size: 26px;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-pagination {
+        margin: 3em 0 2em;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: 60%;
+    }
+
+    .card {
+        width: 40%;
+        margin: 3.5em auto 2em;
+    }
 }
