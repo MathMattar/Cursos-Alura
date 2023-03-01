@@ -106,6 +106,10 @@
         width: 40%;
         margin: 3.5em auto 2em;
     }
+
+    .botões__ancora:active {
+        background-color: var(--azul);
+    }
 }
 
 @media screen and (min-width: 1728px) {
