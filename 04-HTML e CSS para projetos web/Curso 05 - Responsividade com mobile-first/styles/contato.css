@@ -70,3 +70,24 @@ hr {
         width: 35%;
     }
 }
+
+@media screen and (min-width: 1728px) {
+
+    .contato {
+        padding: 4em 27.6vw;
+        gap: 24px;
+    }
+
+    .contato__descricao {
+        width: 98%;
+    }
+
+    .contato__texto {
+        width: 90%;
+    }
+
+    .contato__email{
+        width: 82%;
+    }
+}
+

@@ -51,7 +51,7 @@
     line-height: 27px;
 }
 
-.descricao__text {
+.descricao__texto {
     font-size: 14px;
     line-height: 21px;
 }
@@ -105,5 +105,41 @@
     .card {
         width: 40%;
         margin: 3.5em auto 2em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .carrossel__titulo {
+        font-size: 32px;
+    }
+
+    .carrossel__container {
+        display: flex;
+        align-items: center;
+        gap: 5em;
+        margin: 7em 10vw;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .swiper {
+        width: 50%
+    }
+
+    .descricao {
+        margin-left: 6px;
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .descricao__texto {
+        font-size: 16px;
+        width: 90%;
     }
 }

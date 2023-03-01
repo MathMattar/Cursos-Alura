@@ -67,6 +67,10 @@
     display: none;
 }
 
+.container__texto {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
 
     .cabecalho__menu-hamburguer {
@@ -119,4 +123,39 @@
         display: none;
     }
 
+}
+
+@media screen and (min-width: 1728px){
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .container {
+        margin-right: 1em;
+    }
+
+    .container__titulo {
+        font-size: 30px;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--preto);
+        text-decoration: none;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+
+    
 }

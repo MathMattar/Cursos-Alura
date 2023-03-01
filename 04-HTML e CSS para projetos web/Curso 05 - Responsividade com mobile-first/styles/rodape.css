@@ -19,13 +19,11 @@
     }
 
     .rodape__titulo {
-        font-family: var(--fonte-secundaria);
         font-size: 24px;
         font-weight: 400;
     }
 
     .lista-rodape__titulo {
-        font-family: var(--fonte-secundaria);
         font-size: 14px;
         font-weight: 400;
         color: var(--cinza);
@@ -41,7 +39,6 @@
     }
 
     .lista-rodape__link {
-        font-family: var(--fonte-secundaria);
         font-size: 14px;
         font-weight: 400;
         color: var(--cinza);
@@ -49,3 +46,17 @@
     }
 
 }
+
+@media screen and (min-width: 1728px) {
+
+    .rodape {
+        padding: 56px 236px 70px 212px;
+        justify-content: space-between;
+    }
+
+    .lista-rodape {
+        border-left: 1px solid var(--cinza-claro);
+        padding-left: 1em;
+    }
+}
+
