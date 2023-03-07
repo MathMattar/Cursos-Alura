@@ -1,9 +1,14 @@
 let listaDeItens = [];
+let itemAEditar;
 
 const form = document.getElementById("form-itens");
 const itensInput = document.getElementById("receber-item");
 const ulItens = document.getElementById("lista-de-itens");
 const ulItensComprados = document.getElementById("itens-comprados");
+
+function atualizaLocalStorage() {
+  localStorage.setItem("listaDeItens", JSON.stringify(listaDeItens));
+}
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -53,9 +58,17 @@ function mostratItem() {
     <li class="item-compra is-flex is-justify-content-space-between" data-value="${index}">
         <div>
             <input type="checkbox" class="is-clickable" />
-            <input type="text" class="is-size-5" value="${elemento.valor}"></input>
+            <input type="text" class="is-size-5" value="${elemento.valor}" ${
+        index !== Number(itemAEditar) ? "disabled" : ""
+      }></input>
         </div>
+        
         <div>
+          ${
+            index === Number(itemAEditar)
+              ? '<button onclick="salvarEdicao()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>'
+              : '<i class="fa-regular is-clickable fa-pen-to-square editar"></i>'
+          }
             <i class="fa-solid fa-trash is-clickable deletar"></i>
         </div>
     </li>
@@ -79,10 +92,39 @@ function mostratItem() {
 
   deletarObjetos.forEach((i) => {
     i.addEventListener("click", (e) => {
-      const valorDoElemento = e.target.parentElement.parentElement.getAttribute("data-value");
+      const valorDoElemento =
+        e.target.parentElement.parentElement.getAttribute("data-value");
       listaDeItens.splice(valorDoElemento, 1);
 
       mostratItem();
     });
   });
+
+  const editarItens = document.querySelectorAll(".editar");
+
+  editarItens.forEach((i) => {
+    i.addEventListener("click", (e) => {
+      itemAEditar =
+        e.target.parentElement.parentElement.getAttribute("data-value");
+
+      mostratItem();
+    });
+  });
+
+  atualizaLocalStorage();
+  
+}
+
+function salvarEdicao() {
+  const itemEditado = document.querySelector(
+    `[data-value="${itemAEditar}"] input[type="text"]`
+  );
+
+  listaDeItens[itemAEditar].valor = itemEditado.value;
+
+  console.log(listaDeItens);
+
+  itemAEditar = -1;
+
+  mostratItem();
 }
