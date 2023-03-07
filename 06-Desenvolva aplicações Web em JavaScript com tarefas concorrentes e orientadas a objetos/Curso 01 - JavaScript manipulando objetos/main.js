@@ -5,10 +5,20 @@ const form = document.getElementById("form-itens");
 const itensInput = document.getElementById("receber-item");
 const ulItens = document.getElementById("lista-de-itens");
 const ulItensComprados = document.getElementById("itens-comprados");
+const listaRecuperada = localStorage.getItem("listaDeItens");
 
 function atualizaLocalStorage() {
   localStorage.setItem("listaDeItens", JSON.stringify(listaDeItens));
 }
+
+if (listaRecuperada) {
+  listaDeItens = JSON.parse(listaRecuperada);
+  mostratItem();
+} else {
+  listaDeItens = [];
+}
+
+// Valores que retornam false: valores omitidos, null, NaN, undefined, 0, " " e false.
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -52,7 +62,7 @@ function mostratItem() {
           <i class="fa-solid fa-trash is-clickable deletar"></i>
       </div>
   </li>
-`;
+          `;
     } else {
       ulItens.innerHTML += `
     <li class="item-compra is-flex is-justify-content-space-between" data-value="${index}">
@@ -112,7 +122,6 @@ function mostratItem() {
   });
 
   atualizaLocalStorage();
-  
 }
 
 function salvarEdicao() {
