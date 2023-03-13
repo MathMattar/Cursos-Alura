@@ -1,5 +1,6 @@
 .dadosDolar,
-.dadosIene {
+.dadosIene,
+.dadosEuro {
     margin: 3em auto;
     padding: 2em;
     display: flex;
@@ -16,6 +17,7 @@
 
 .grafico__titulo {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
