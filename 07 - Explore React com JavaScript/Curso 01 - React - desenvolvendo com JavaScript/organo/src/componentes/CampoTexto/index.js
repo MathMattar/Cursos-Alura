@@ -2,10 +2,18 @@ import "./CampoTexto.css";
 
 // Declarações react iniciam com letra maiúscula
 const CampoTexto = (props) => {
+  const aoDigitado = (e) => {
+    props.aoAlterado(e.target.value);
+  };
+
   return (
     <div className="campo-texto">
       <label>{props.label}</label>
-      <input placeholder={props.placeholder} />
+      <input
+        onChange={aoDigitado}
+        required={props.obrigatorio}
+        placeholder={props.placeholder}
+      />
     </div>
   );
 };

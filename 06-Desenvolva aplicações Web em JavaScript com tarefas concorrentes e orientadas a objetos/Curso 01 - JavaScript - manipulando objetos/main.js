@@ -13,7 +13,7 @@ function atualizaLocalStorage() {
 
 if (listaRecuperada) {
   listaDeItens = JSON.parse(listaRecuperada);
-  mostratItem();
+  mostrarItem();
 } else {
   listaDeItens = [];
 }
@@ -24,7 +24,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   salvarItem();
-  mostratItem();
+  mostrarItem();
 
   itensInput.focus();
 });
@@ -46,7 +46,7 @@ function salvarItem() {
   itensInput.value = "";
 }
 
-function mostratItem() {
+function mostrarItem() {
   ulItens.innerHTML = "";
   ulItensComprados.innerHTML = "";
 
@@ -94,7 +94,7 @@ function mostratItem() {
         e.target.parentElement.parentElement.getAttribute("data-value");
       listaDeItens[valorDoElemento].checar = e.target.checked;
 
-      mostratItem();
+      mostrarItem();
     });
   });
 
@@ -106,7 +106,7 @@ function mostratItem() {
         e.target.parentElement.parentElement.getAttribute("data-value");
       listaDeItens.splice(valorDoElemento, 1);
 
-      mostratItem();
+      mostrarItem();
     });
   });
 
@@ -117,7 +117,7 @@ function mostratItem() {
       itemAEditar =
         e.target.parentElement.parentElement.getAttribute("data-value");
 
-      mostratItem();
+      mostrarItem();
     });
   });
 
@@ -135,5 +135,5 @@ function salvarEdicao() {
 
   itemAEditar = -1;
 
-  mostratItem();
+  mostrarItem();
 }
