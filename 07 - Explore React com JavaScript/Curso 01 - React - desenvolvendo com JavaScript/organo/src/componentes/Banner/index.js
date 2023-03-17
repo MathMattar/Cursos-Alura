@@ -1,6 +1,6 @@
 import "./Banner.css";
 
-function Banner() {
+export const Banner = () => {
   // JSX
   return (
     <header className="banner">
@@ -10,6 +10,6 @@ function Banner() {
       />
     </header>
   );
-}
+};
 
-export default Banner;
+export default Banner
