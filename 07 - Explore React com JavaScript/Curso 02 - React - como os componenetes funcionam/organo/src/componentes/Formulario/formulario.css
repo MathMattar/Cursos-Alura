@@ -4,6 +4,7 @@
     margin: 80px 0;
 
 }
+
 .formulario-container .formulario {
     max-width: 80%;
     background: #F7F7F7;
@@ -11,6 +12,7 @@
     border-radius: 20px;
     padding: 36px 64px;
 }
+
 .formulario-container .formulario h2 {
     font-weight: 400;
     font-size: 32px;
