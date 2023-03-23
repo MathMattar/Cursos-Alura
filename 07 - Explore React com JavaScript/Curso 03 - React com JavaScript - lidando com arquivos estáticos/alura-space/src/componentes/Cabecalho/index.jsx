@@ -7,7 +7,11 @@ export default function Cabecalho() {
     <header className={styles.cabecalho}>
       <img src={logo} alt="Logo do Alura Space" />
       <div className={styles.cabecalho__container}>
-        <input type="text" placeholder="O que você procura?" className={styles.cabecalho__input}/>
+        <input
+          type="text"
+          placeholder="O que você procura?"
+          className={styles.cabecalho__input}
+        />
         <img src={search} alt="Ícone de busca" />
       </div>
     </header>
