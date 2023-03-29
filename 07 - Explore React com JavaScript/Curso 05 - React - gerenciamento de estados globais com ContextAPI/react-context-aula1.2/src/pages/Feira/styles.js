@@ -1,10 +1,10 @@
-import styled from "styled-components";
-const titleGray = "#464646";
+import styled from 'styled-components';
+const titleGray = '#464646';
 
 export const Container = styled.main`
   min-height: 100vh;
   padding: 0 20px;
-  @media (min-width: 768px) {
+  @media(min-width: 768px) {
     margin: 0 auto;
     width: 50%;
   }
@@ -16,8 +16,7 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    > h2,
-    > h3 {
+    > h2, > h3 {
       color: ${titleGray};
     }
     h2 {
@@ -28,7 +27,7 @@ export const Header = styled.header`
     }
   }
   > p {
-    color: #a3a3a3;
+    color: #A3A3A3;
     font-size: 26px;
   }
 `;
