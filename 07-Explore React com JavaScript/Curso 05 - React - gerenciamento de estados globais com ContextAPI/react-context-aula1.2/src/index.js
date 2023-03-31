@@ -3,7 +3,7 @@ import { StylesProvider } from "@material-ui/core/styles";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Login from "pages/Login";
+import Rotas from "./rotas";
 
 const theme = createTheme({
   palette: {
@@ -20,7 +20,7 @@ createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <Login />
+        <Rotas />
       </ThemeProvider>
     </StylesProvider>
   </React.StrictMode>
