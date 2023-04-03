@@ -5,7 +5,6 @@ import Login from "pages/Login";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { UsuarioProvider } from "common/context/Usuario";
 
-
 function Rotas() {
   return (
     <BrowserRouter>
