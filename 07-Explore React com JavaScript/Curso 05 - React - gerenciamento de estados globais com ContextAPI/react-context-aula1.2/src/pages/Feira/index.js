@@ -6,7 +6,6 @@ import NavBar from "./NavBar";
 
 import { useContext } from "react";
 import { UsuarioContext } from "common/context/Usuario";
-
 function Feira() {
 
   const { nome, saldo} = useContext(UsuarioContext);
