@@ -1,6 +1,5 @@
 import styled from "styled-components";
 const titleGray = "#464646";
-
 export const Container = styled.main`
   min-height: 100vh;
   padding: 0 20px;
@@ -8,7 +7,6 @@ export const Container = styled.main`
     margin: 0 auto;
     width: 50%;
   }
-  
 `;
 
 export const Header = styled.header`
